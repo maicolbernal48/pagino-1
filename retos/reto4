@@ -1,0 +1,23 @@
+import random 
+print("juego piedra papel o tjera ")
+opcion=int(input("selecciones la opcion deseada\n 1 piedra \n 2 papel\n 3 tijera\n"))
+sistema=random.randint(1,3)
+print(sistema)
+if sistema==1 and opcion==2:
+    print("el sistema saco piedra y usted papel \n usted gano")
+elif sistema==1 and opcion==1:
+    print("el sistema saco piedra y usted piedra \n empate")
+elif sistema==1 and opcion==3:
+    print("el sistema saco piedra y usted tijera \n usted perdio")
+elif sistema==2 and opcion==1:
+    print("el sistema saco papel y usted piedra \n usted perdio")
+elif sistema==2 and opcion==3:
+    print("el sistema saco papel y usted tijera \n usted gano")
+elif sistema==2 and opcion==2:
+    print("el sistema saco papel y usted papel \n empate")
+elif sistema==3 and opcion==1:
+    print("el sistema saco tijera y usted piedra \n usted gano")
+elif sistema==3 and opcion==2:
+    print("el sistema saco tijera y usted papel \n usted perdio")
+elif sistema==3 and opcion==3:
+    print("el sistema saco papel y usted tijera \n empate")

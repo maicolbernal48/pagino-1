@@ -1,0 +1,3 @@
+gradosfahrenheit=int(input("ingrese la temperatura en grados fahrenheit "))
+gradosCentigrados=(gradosfahrenheit-32)/1.8
+print("la temperatura en grados centigrados es ",gradosCentigrados)

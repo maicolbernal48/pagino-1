@@ -1,0 +1,4 @@
+pesoBebe=int(input("ingrese el peso actual del bebe en libras "))
+mesesBebe=int(input("ingrese los meses del bebe "))
+dosisVacina=(pesoBebe+10)/(mesesBebe*10)*8
+print("la dosis para el bebe es ",dosisVacina)
