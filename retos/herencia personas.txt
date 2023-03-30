@@ -1,0 +1,37 @@
+from nuevo import persona
+
+class empleado(persona):
+    # atributos
+    def __init__(self,cargo,valorHora,horasTrabajadas,departamento):
+        self.cargo=cargo
+        self.valorHora=valorHora
+        self.horasTrabajadas=horasTrabajadas
+        self.departamento=departamento
+        self.pagoEmpleado=self.calcularHorarios()
+
+    def __init__(self):
+        self.empleado1 = empleado("", "", "", "", 0, 0, 0, "","",0,0,"",0)
+
+    # metodos
+    def pedirDatos(self):
+        self.tipoDocumento=input('ingrese el tipo de documento del empleado: ')
+        self.numeroDocumento=input('ingrese el numero del documento: ')
+        self.nombre=input('ingrese el nombre del empleado : ')
+        self.apellido=input('ingrese el apellido del empleado : ')
+        self.peso=float(input('ingrese el peso en kg: '))
+        self.estatura=float(input('ingrese la altura en mts: '))
+        self.edad=int(input('ingrese la edad: '))
+        self.sexo=input('ingrese el sexo: ')
+        self.cargo=input('ingrese el cargo del empleado: ')
+        self.valorHora=float(input('ingrese cuanto va a pagarle al empleado por hora: '))
+        self.horasTrabajadas=float(input('ingrese las horas que trabajo el empleado: '))
+        self.departamento=input('ingrese el departamento del empleado: ')
+
+    def calcularHorarios(self):
+        valorTotal = self.valorHora * self.horasTrabajadas
+        reteica = valorTotal * 0.00966
+        honorarios = valorTotal - reteica
+        return honorarios
+    
+    def mostrarEmpleado(self):
+        print(f'\n {self.tipoDocumento} \n{self.nombre} \n{self.apellido} \n{self.cargo} \n{self.horasTrabajadas} \n{self.valorHora} \n{self.pagoEmpleado}')
