@@ -1,0 +1,43 @@
+class persona:
+#Atributos
+    tipoDoc=0
+    documento=0
+    nombre=""
+    apellido=""
+    peso=0.5
+    estatura=0.5
+    edad=0
+    sexo=""
+ #Metodos
+    def __init__(self,tipoDoc,documento,nombre,apellido,peso,estatura ,edad ,sexo):
+        self.tipoDoc=tipoDoc
+        self.documento=documento
+        self.nombre=nombre
+        self.apellido=apellido
+        self.peso=peso
+        self.estatura=estatura
+        self.edad=edad
+        self.sexo=sexo
+    def registrarPersona(self):
+        self.tipoDoc=input("ingrese el tipo de documento ")
+        self.documento=int(input("ingrese el numero de documento"))
+        self.nombre=input("ingrese el nombre  ")
+        self.apellido=input("ingrese el apellido ")
+        self.peso=int(input("ingrese el peso en kilos"))
+        self.estatura=float(input("ingrese la estatura en metros"))
+        self.edad=int(input("ingrese la edad "))
+        self.sexo=input("ingrese sexo")
+    def mostrarPersona(self):
+        print(f"el usuario identificado con {self.tipoDoc}\n numero {self.documento}\n de nombre {self.nombre}  {self.apellido} \n tiene un peso de {self.peso}\n su estatura es {self.estatura}\n su edad es {self.edad}\n y su sexo es {self.sexo}")
+
+    def calcularIMC(self):
+        pesoActual=self.peso/(self.estatura**2)
+        print(f'el ususario {self.nombre}   tiene un peso de {self.pesoActual}')
+        return pesoActual
+
+
+    def mayorEdad (self,edad):
+        if edad>=18:
+            print("el usuario es mayor de edad ")
+        else:
+            print("el usuario es menor de edad ")
