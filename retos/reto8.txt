@@ -1,0 +1,17 @@
+numeroNotas=int(input( "¿cuantas notas desea calcular? "))
+sumaNotas=0
+listaNotas=[]
+
+for i in range(0,numeroNotas):
+    notas=float(input('ingrese el valor de la nota: '))
+    listaNotas.append(notas)
+    sumaNotas=sumaNotas+notas
+    promedio=sumaNotas/len(listaNotas)
+print('el promedio esc: ',promedio)
+
+if promedio<3.0:
+    print('Reprobaste')
+elif promedio>=3.0 and promedio<4.0:
+    print('Pasaste Raspando')
+elif promedio>= 4.0:
+    print('aprovaste con buenos resultados')
